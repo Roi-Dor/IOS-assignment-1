@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-001">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!-- Navigation Controller -->
+        <scene sceneID="nav-scene">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nav-001" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="navbar-001">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="menu-vc" kind="relationship" relationship="rootViewController" id="nav-root-segue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-200" y="0.0"/>
+        </scene>
+        <!-- Menu -->
+        <scene sceneID="menu-scene">
+            <objects>
+                <viewController id="menu-vc" customClass="MenuViewController" customModule="CardBattle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="menu-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="menu-west">
+                                <rect key="frame" x="20" y="67" width="73" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="East Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="menu-east">
+                                <rect key="frame" x="305" y="67" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="menu-insertname">
+                                <rect key="frame" x="146.5" y="180" width="100" height="34"/>
+                                <state key="normal" title="Insert name"/>
+                                <connections>
+                                    <action selector="insertNameTapped:" destination="menu-vc" eventType="touchUpInside" id="menu-insertname-action"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="menu-namelabel">
+                                <rect key="frame" x="176.5" y="187" width="40" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locating…" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="menu-status">
+                                <rect key="frame" x="40" y="280" width="313" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="menu-spinner">
+                                <rect key="frame" x="178.5" y="330" width="36" height="36"/>
+                            </activityIndicatorView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="menu-start">
+                                <rect key="frame" x="161.5" y="420" width="70" height="44"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startTapped:" destination="menu-vc" eventType="touchUpInside" id="menu-start-action"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="menu-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="menu-west" firstAttribute="leading" secondItem="menu-safe" secondAttribute="leading" constant="20" id="c-west-lead"/>
+                            <constraint firstItem="menu-west" firstAttribute="top" secondItem="menu-safe" secondAttribute="top" constant="8" id="c-west-top"/>
+                            <constraint firstItem="menu-safe" firstAttribute="trailing" secondItem="menu-east" secondAttribute="trailing" constant="20" id="c-east-trail"/>
+                            <constraint firstItem="menu-east" firstAttribute="top" secondItem="menu-safe" secondAttribute="top" constant="8" id="c-east-top"/>
+                            <constraint firstItem="menu-insertname" firstAttribute="centerX" secondItem="menu-view" secondAttribute="centerX" id="c-insert-cx"/>
+                            <constraint firstItem="menu-insertname" firstAttribute="top" secondItem="menu-safe" secondAttribute="top" constant="120" id="c-insert-top"/>
+                            <constraint firstItem="menu-namelabel" firstAttribute="centerX" secondItem="menu-view" secondAttribute="centerX" id="c-name-cx"/>
+                            <constraint firstItem="menu-namelabel" firstAttribute="centerY" secondItem="menu-insertname" secondAttribute="centerY" id="c-name-cy"/>
+                            <constraint firstItem="menu-status" firstAttribute="centerX" secondItem="menu-view" secondAttribute="centerX" id="c-status-cx"/>
+                            <constraint firstItem="menu-status" firstAttribute="top" secondItem="menu-insertname" secondAttribute="bottom" constant="66" id="c-status-top"/>
+                            <constraint firstItem="menu-status" firstAttribute="leading" secondItem="menu-safe" secondAttribute="leading" constant="20" id="c-status-lead"/>
+                            <constraint firstItem="menu-safe" firstAttribute="trailing" secondItem="menu-status" secondAttribute="trailing" constant="20" id="c-status-trail"/>
+                            <constraint firstItem="menu-spinner" firstAttribute="centerX" secondItem="menu-view" secondAttribute="centerX" id="c-spin-cx"/>
+                            <constraint firstItem="menu-spinner" firstAttribute="top" secondItem="menu-status" secondAttribute="bottom" constant="30" id="c-spin-top"/>
+                            <constraint firstItem="menu-start" firstAttribute="centerX" secondItem="menu-view" secondAttribute="centerX" id="c-start-cx"/>
+                            <constraint firstItem="menu-start" firstAttribute="top" secondItem="menu-spinner" secondAttribute="bottom" constant="54" id="c-start-top"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="menu-spinner" id="o-spinner"/>
+                        <outlet property="insertNameButton" destination="menu-insertname" id="o-insert"/>
+                        <outlet property="nameLabel" destination="menu-namelabel" id="o-name"/>
+                        <outlet property="startButton" destination="menu-start" id="o-start"/>
+                        <outlet property="statusLabel" destination="menu-status" id="o-status"/>
+                        <segue destination="game-vc" kind="show" identifier="toGame" id="menu-to-game"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="menu-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="0.0"/>
+        </scene>
+        <!-- Game -->
+        <scene sceneID="game-scene">
+            <objects>
+                <viewController id="game-vc" customClass="GameViewController" customModule="CardBattle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="game-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="game-name">
+                                <rect key="frame" x="156.5" y="67" width="80" height="24.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="bold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="game-round">
+                                <rect key="frame" x="146.5" y="107" width="100" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="game-pscore">
+                                <rect key="frame" x="52" y="170" width="80" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PC: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="game-cscore">
+                                <rect key="frame" x="261" y="170" width="80" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="game-pcardview">
+                                <rect key="frame" x="36" y="240" width="126" height="176"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="game-pcard">
+                                        <rect key="frame" x="12" y="46" width="102" height="118"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="game-pvalue">
+                                        <rect key="frame" x="8" y="6" width="34" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" image="CardBack" id="game-pback">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="176"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="game-pvalue" firstAttribute="top" secondItem="game-pcardview" secondAttribute="top" constant="6" id="pv-top"/>
+                                    <constraint firstItem="game-pvalue" firstAttribute="leading" secondItem="game-pcardview" secondAttribute="leading" constant="8" id="pv-lead"/>
+                                    <constraint firstItem="game-pcard" firstAttribute="leading" secondItem="game-pcardview" secondAttribute="leading" constant="12" id="pi-lead"/>
+                                    <constraint firstItem="game-pcardview" firstAttribute="trailing" secondItem="game-pcard" secondAttribute="trailing" constant="12" id="pi-trail"/>
+                                    <constraint firstItem="game-pcardview" firstAttribute="bottom" secondItem="game-pcard" secondAttribute="bottom" constant="12" id="pi-bot"/>
+                                    <constraint firstItem="game-pcard" firstAttribute="top" secondItem="game-pvalue" secondAttribute="bottom" constant="4" id="pi-top"/>
+                                    <constraint firstItem="game-pback" firstAttribute="top" secondItem="game-pcardview" secondAttribute="top" id="pb-top"/>
+                                    <constraint firstItem="game-pback" firstAttribute="leading" secondItem="game-pcardview" secondAttribute="leading" id="pb-lead"/>
+                                    <constraint firstItem="game-pcardview" firstAttribute="trailing" secondItem="game-pback" secondAttribute="trailing" id="pb-trail"/>
+                                    <constraint firstItem="game-pcardview" firstAttribute="bottom" secondItem="game-pback" secondAttribute="bottom" id="pb-bot"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="game-ccardview">
+                                <rect key="frame" x="231" y="240" width="126" height="176"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="game-ccard">
+                                        <rect key="frame" x="12" y="46" width="102" height="118"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="game-cvalue">
+                                        <rect key="frame" x="8" y="6" width="34" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" image="CardBack" id="game-cback">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="176"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="game-cvalue" firstAttribute="top" secondItem="game-ccardview" secondAttribute="top" constant="6" id="cv-top"/>
+                                    <constraint firstItem="game-cvalue" firstAttribute="leading" secondItem="game-ccardview" secondAttribute="leading" constant="8" id="cv-lead"/>
+                                    <constraint firstItem="game-ccard" firstAttribute="leading" secondItem="game-ccardview" secondAttribute="leading" constant="12" id="ci-lead"/>
+                                    <constraint firstItem="game-ccardview" firstAttribute="trailing" secondItem="game-ccard" secondAttribute="trailing" constant="12" id="ci-trail"/>
+                                    <constraint firstItem="game-ccardview" firstAttribute="bottom" secondItem="game-ccard" secondAttribute="bottom" constant="12" id="ci-bot"/>
+                                    <constraint firstItem="game-ccard" firstAttribute="top" secondItem="game-cvalue" secondAttribute="bottom" constant="4" id="ci-top"/>
+                                    <constraint firstItem="game-cback" firstAttribute="top" secondItem="game-ccardview" secondAttribute="top" id="cb-top"/>
+                                    <constraint firstItem="game-cback" firstAttribute="leading" secondItem="game-ccardview" secondAttribute="leading" id="cb-lead"/>
+                                    <constraint firstItem="game-ccardview" firstAttribute="trailing" secondItem="game-cback" secondAttribute="trailing" id="cb-trail"/>
+                                    <constraint firstItem="game-ccardview" firstAttribute="bottom" secondItem="game-cback" secondAttribute="bottom" id="cb-bot"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="game-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="game-name" firstAttribute="centerX" secondItem="game-view" secondAttribute="centerX" id="g-name-cx"/>
+                            <constraint firstItem="game-name" firstAttribute="top" secondItem="game-safe" secondAttribute="top" constant="8" id="g-name-top"/>
+                            <constraint firstItem="game-round" firstAttribute="centerX" secondItem="game-view" secondAttribute="centerX" id="g-round-cx"/>
+                            <constraint firstItem="game-round" firstAttribute="top" secondItem="game-name" secondAttribute="bottom" constant="16" id="g-round-top"/>
+                            <constraint firstItem="game-pscore" firstAttribute="leading" secondItem="game-safe" secondAttribute="leading" constant="36" id="g-ps-lead"/>
+                            <constraint firstItem="game-pscore" firstAttribute="top" secondItem="game-round" secondAttribute="bottom" constant="24" id="g-ps-top"/>
+                            <constraint firstItem="game-safe" firstAttribute="trailing" secondItem="game-cscore" secondAttribute="trailing" constant="36" id="g-cs-trail"/>
+                            <constraint firstItem="game-cscore" firstAttribute="centerY" secondItem="game-pscore" secondAttribute="centerY" id="g-cs-cy"/>
+                            <constraint firstItem="game-pcardview" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="game-safe" secondAttribute="leading" constant="16" id="g-pc-lead"/>
+                            <constraint firstItem="game-view" firstAttribute="centerX" secondItem="game-pcardview" secondAttribute="trailing" constant="14" id="g-pc-cx"/>
+                            <constraint firstItem="game-pcardview" firstAttribute="top" secondItem="game-pscore" secondAttribute="bottom" constant="28" id="g-pc-top"/>
+                            <constraint firstItem="game-pcardview" firstAttribute="width" secondItem="game-view" secondAttribute="width" multiplier="0.32" priority="750" id="g-pc-w"/>
+                            <constraint firstItem="game-pcardview" firstAttribute="height" secondItem="game-pcardview" secondAttribute="width" multiplier="1.4" id="g-pc-h"/>
+                            <constraint firstItem="game-pcardview" firstAttribute="height" relation="lessThanOrEqual" secondItem="game-safe" secondAttribute="height" multiplier="0.5" id="g-pc-hmax"/>
+                            <constraint firstItem="game-safe" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="game-pcardview" secondAttribute="bottom" constant="28" id="g-pc-bot"/>
+                            <constraint firstItem="game-safe" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="game-ccardview" secondAttribute="trailing" constant="16" id="g-cc-trail"/>
+                            <constraint firstItem="game-ccardview" firstAttribute="leading" secondItem="game-view" secondAttribute="centerX" constant="14" id="g-cc-cx"/>
+                            <constraint firstItem="game-ccardview" firstAttribute="top" secondItem="game-pcardview" secondAttribute="top" id="g-cc-top"/>
+                            <constraint firstItem="game-ccardview" firstAttribute="width" secondItem="game-pcardview" secondAttribute="width" id="g-cc-w"/>
+                            <constraint firstItem="game-ccardview" firstAttribute="height" secondItem="game-pcardview" secondAttribute="height" id="g-cc-h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pcBackImageView" destination="game-cback" id="o-cback"/>
+                        <outlet property="pcCardImageView" destination="game-ccard" id="o-ccard"/>
+                        <outlet property="pcCardView" destination="game-ccardview" id="o-ccardview"/>
+                        <outlet property="pcScoreLabel" destination="game-cscore" id="o-cscore"/>
+                        <outlet property="pcValueLabel" destination="game-cvalue" id="o-cvalue"/>
+                        <outlet property="playerBackImageView" destination="game-pback" id="o-pback"/>
+                        <outlet property="playerCardImageView" destination="game-pcard" id="o-pcard"/>
+                        <outlet property="playerCardView" destination="game-pcardview" id="o-pcardview"/>
+                        <outlet property="playerNameLabel" destination="game-name" id="o-gname"/>
+                        <outlet property="playerScoreLabel" destination="game-pscore" id="o-pscore"/>
+                        <outlet property="playerValueLabel" destination="game-pvalue" id="o-pvalue"/>
+                        <outlet property="roundLabel" destination="game-round" id="o-round"/>
+                        <segue destination="summary-vc" kind="show" identifier="toSummary" id="game-to-summary"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="game-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="0.0"/>
+        </scene>
+        <!-- Summary -->
+        <scene sceneID="summary-scene">
+            <objects>
+                <viewController id="summary-vc" customClass="SummaryViewController" customModule="CardBattle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="summary-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner: —" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sum-winner">
+                                <rect key="frame" x="40" y="360" width="313" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="bold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score: —" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sum-score">
+                                <rect key="frame" x="146.5" y="405" width="100" height="24.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sum-back">
+                                <rect key="frame" x="135.5" y="473" width="122" height="44"/>
+                                <state key="normal" title="BACK TO MENU"/>
+                                <connections>
+                                    <action selector="backToMenuTapped:" destination="summary-vc" eventType="touchUpInside" id="sum-back-action"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="summary-safe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sum-winner" firstAttribute="centerX" secondItem="summary-view" secondAttribute="centerX" id="s-win-cx"/>
+                            <constraint firstItem="sum-winner" firstAttribute="centerY" secondItem="summary-view" secondAttribute="centerY" constant="-40" id="s-win-cy"/>
+                            <constraint firstItem="sum-winner" firstAttribute="leading" secondItem="summary-safe" secondAttribute="leading" constant="20" id="s-win-lead"/>
+                            <constraint firstItem="summary-safe" firstAttribute="trailing" secondItem="sum-winner" secondAttribute="trailing" constant="20" id="s-win-trail"/>
+                            <constraint firstItem="sum-score" firstAttribute="centerX" secondItem="summary-view" secondAttribute="centerX" id="s-score-cx"/>
+                            <constraint firstItem="sum-score" firstAttribute="top" secondItem="sum-winner" secondAttribute="bottom" constant="16" id="s-score-top"/>
+                            <constraint firstItem="sum-back" firstAttribute="centerX" secondItem="summary-view" secondAttribute="centerX" id="s-back-cx"/>
+                            <constraint firstItem="sum-back" firstAttribute="top" secondItem="sum-score" secondAttribute="bottom" constant="44" id="s-back-top"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backToMenuButton" destination="sum-back" id="o-back"/>
+                        <outlet property="scoreLabel" destination="sum-score" id="o-sscore"/>
+                        <outlet property="winnerLabel" destination="sum-winner" id="o-winner"/>
+                        <segue destination="summary-exit" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="seg-unwind"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="summary-fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="summary-exit" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

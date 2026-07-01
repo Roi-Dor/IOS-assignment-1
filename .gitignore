@@ -1,0 +1,15 @@
+# Claude / editor
+.claude/
+
+# Project docs kept local only
+NOTES.md
+IMPLEMENTATION_SPEC.md
+
+# macOS
+.DS_Store
+
+# Xcode user data
+xcuserdata/
+*.xcuserstate
+build/
+DerivedData/

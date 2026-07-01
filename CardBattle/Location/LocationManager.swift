@@ -1,16 +1,11 @@
-import Foundation
 import CoreLocation
 
-@MainActor
-final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    enum Status {
-        case idle, locating, done, denied
-    }
-
-    @Published var longitude: Double?
-    @Published var status: Status = .idle
-
+final class LocationManager: NSObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
+    private var didReport = false
+
+    var onLongitude: ((Double) -> Void)?
+    var onDenied: (() -> Void)?
 
     override init() {
         super.init()
@@ -18,47 +13,34 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     }
 
     func start() {
-        guard status != .locating, longitude == nil else { return }
-        status = .locating
+        didReport = false
         manager.requestWhenInUseAuthorization()
         manager.requestLocation()
     }
 
-    // MARK: - CLLocationManagerDelegate
-
-    nonisolated func locationManager(_ manager: CLLocationManager,
-                                     didUpdateLocations locations: [CLLocation]) {
-        guard let first = locations.first else { return }
-        let lon = first.coordinate.longitude
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard !didReport, let location = locations.first else { return }
+        didReport = true
         manager.stopUpdatingLocation()
-        Task { @MainActor in
-            self.longitude = lon
-            self.status = .done
-        }
+        onLongitude?(location.coordinate.longitude)
     }
 
-    nonisolated func locationManager(_ manager: CLLocationManager,
-                                     didFailWithError error: Error) {
-        Task { @MainActor in
-            if self.longitude == nil {
-                self.status = .denied
-            }
-        }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        guard !didReport else { return }
+        didReport = true
+        onDenied?()
     }
 
-    nonisolated func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        let authStatus = manager.authorizationStatus
-        Task { @MainActor in
-            switch authStatus {
-            case .denied, .restricted:
-                self.status = .denied
-            case .authorizedWhenInUse, .authorizedAlways:
-                if self.longitude == nil {
-                    manager.requestLocation()
-                }
-            default:
-                break
-            }
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .denied, .restricted:
+            guard !didReport else { return }
+            didReport = true
+            onDenied?()
+        case .authorizedWhenInUse, .authorizedAlways:
+            manager.requestLocation()
+        default:
+            break
         }
     }
 }

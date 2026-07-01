@@ -3,23 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		A1000010 /* CardBattle */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CardBattle;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
+/* Begin PBXBuildFile section */
+		BBBBBBBBBBBBBBBBBBBB0001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0001 /* AppDelegate.swift */; };
+		BBBBBBBBBBBBBBBBBBBB0002 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0002 /* SceneDelegate.swift */; };
+		BBBBBBBBBBBBBBBBBBBB0003 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0003 /* Card.swift */; };
+		BBBBBBBBBBBBBBBBBBBB0004 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0004 /* GameState.swift */; };
+		BBBBBBBBBBBBBBBBBBBB0005 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0005 /* LocationManager.swift */; };
+		BBBBBBBBBBBBBBBBBBBB0006 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0006 /* MenuViewController.swift */; };
+		BBBBBBBBBBBBBBBBBBBB0007 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0007 /* GameViewController.swift */; };
+		BBBBBBBBBBBBBBBBBBBB0008 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0008 /* SummaryViewController.swift */; };
+		BBBBBBBBBBBBBBBBBBBB0009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0009 /* Main.storyboard */; };
+		BBBBBBBBBBBBBBBBBBBB0010 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0010 /* LaunchScreen.storyboard */; };
+		BBBBBBBBBBBBBBBBBBBB0011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFFFFFFFFFFFFFFFFFFF0011 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A1000020 /* CardBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFFFFFFFFFFFFFFFFFFF0001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0002 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0003 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0004 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0005 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0006 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0007 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0008 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0009 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0010 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFFFFFFFFFFFFFFFFFF0013 /* CardBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A1000030 /* Frameworks */ = {
+		CCCCCCCCCCCCCCCCCCCC0004 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +47,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A1000040 = {
+		DDDDDDDDDDDDDDDDDDDD0001 = {
 			isa = PBXGroup;
 			children = (
-				A1000010 /* CardBattle */,
-				A1000050 /* Products */,
+				DDDDDDDDDDDDDDDDDDDD0002 /* CardBattle */,
+				DDDDDDDDDDDDDDDDDDDD0007 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A1000050 /* Products */ = {
+		DDDDDDDDDDDDDDDDDDDD0002 /* CardBattle */ = {
 			isa = PBXGroup;
 			children = (
-				A1000020 /* CardBattle.app */,
+				FFFFFFFFFFFFFFFFFFFF0001 /* AppDelegate.swift */,
+				FFFFFFFFFFFFFFFFFFFF0002 /* SceneDelegate.swift */,
+				DDDDDDDDDDDDDDDDDDDD0003 /* Models */,
+				DDDDDDDDDDDDDDDDDDDD0004 /* State */,
+				DDDDDDDDDDDDDDDDDDDD0005 /* Location */,
+				DDDDDDDDDDDDDDDDDDDD0006 /* Controllers */,
+				FFFFFFFFFFFFFFFFFFFF0009 /* Main.storyboard */,
+				FFFFFFFFFFFFFFFFFFFF0010 /* LaunchScreen.storyboard */,
+				FFFFFFFFFFFFFFFFFFFF0011 /* Assets.xcassets */,
+				FFFFFFFFFFFFFFFFFFFF0012 /* Info.plist */,
+			);
+			path = CardBattle;
+			sourceTree = "<group>";
+		};
+		DDDDDDDDDDDDDDDDDDDD0003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFFFFFFFFFFFFFFFFFFF0003 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DDDDDDDDDDDDDDDDDDDD0004 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FFFFFFFFFFFFFFFFFFFF0004 /* GameState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		DDDDDDDDDDDDDDDDDDDD0005 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				FFFFFFFFFFFFFFFFFFFF0005 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		DDDDDDDDDDDDDDDDDDDD0006 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFFFFFFFFFFFFFFFFFFF0006 /* MenuViewController.swift */,
+				FFFFFFFFFFFFFFFFFFFF0007 /* GameViewController.swift */,
+				FFFFFFFFFFFFFFFFFFFF0008 /* SummaryViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DDDDDDDDDDDDDDDDDDDD0007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFFFFFFFFFFFFFFFFFFF0013 /* CardBattle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,87 +117,92 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1000060 /* CardBattle */ = {
+		CCCCCCCCCCCCCCCCCCCC0002 /* CardBattle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1000090 /* Build configuration list for PBXNativeTarget "CardBattle" */;
+			buildConfigurationList = CCCCCCCCCCCCCCCCCCCC0007 /* Build configuration list for PBXNativeTarget "CardBattle" */;
 			buildPhases = (
-				A1000070 /* Sources */,
-				A1000030 /* Frameworks */,
-				A1000080 /* Resources */,
+				CCCCCCCCCCCCCCCCCCCC0003 /* Sources */,
+				CCCCCCCCCCCCCCCCCCCC0004 /* Frameworks */,
+				CCCCCCCCCCCCCCCCCCCC0005 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				A1000010 /* CardBattle */,
-			);
 			name = CardBattle;
 			productName = CardBattle;
-			productReference = A1000020 /* CardBattle.app */;
+			productReference = FFFFFFFFFFFFFFFFFFFF0013 /* CardBattle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A1000100 /* Project object */ = {
+		CCCCCCCCCCCCCCCCCCCC0001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					A1000060 = {
-						CreatedOnToolsVersion = 16.0;
+					CCCCCCCCCCCCCCCCCCCC0002 = {
+						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = A1000110 /* Build configuration list for PBXProject "CardBattle" */;
-			compatibilityVersion = "Xcode 15.0";
+			buildConfigurationList = CCCCCCCCCCCCCCCCCCCC0006 /* Build configuration list for PBXProject "CardBattle" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = A1000040;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = A1000050 /* Products */;
+			mainGroup = DDDDDDDDDDDDDDDDDDDD0001;
+			productRefGroup = DDDDDDDDDDDDDDDDDDDD0007 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1000060 /* CardBattle */,
+				CCCCCCCCCCCCCCCCCCCC0002 /* CardBattle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A1000080 /* Resources */ = {
+		CCCCCCCCCCCCCCCCCCCC0005 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBBBBBBBBBBBBBBBBBB0009 /* Main.storyboard in Resources */,
+				BBBBBBBBBBBBBBBBBBBB0011 /* Assets.xcassets in Resources */,
+				BBBBBBBBBBBBBBBBBBBB0010 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A1000070 /* Sources */ = {
+		CCCCCCCCCCCCCCCCCCCC0003 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBBBBBBBBBBBBBBBBBB0006 /* MenuViewController.swift in Sources */,
+				BBBBBBBBBBBBBBBBBBBB0007 /* GameViewController.swift in Sources */,
+				BBBBBBBBBBBBBBBBBBBB0008 /* SummaryViewController.swift in Sources */,
+				BBBBBBBBBBBBBBBBBBBB0003 /* Card.swift in Sources */,
+				BBBBBBBBBBBBBBBBBBBB0004 /* GameState.swift in Sources */,
+				BBBBBBBBBBBBBBBBBBBB0005 /* LocationManager.swift in Sources */,
+				BBBBBBBBBBBBBBBBBBBB0001 /* AppDelegate.swift in Sources */,
+				BBBBBBBBBBBBBBBBBBBB0002 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A1000120 /* Debug */ = {
+		CCCCCCCCCCCCCCCCCCCC0008 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -175,22 +249,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		A1000130 /* Release */ = {
+		CCCCCCCCCCCCCCCCCCCC0009 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -231,30 +303,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A1000140 /* Debug */ = {
+		CCCCCCCCCCCCCCCCCCCC0010 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location once to assign your side in the game.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CardBattle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -268,20 +335,15 @@
 			};
 			name = Debug;
 		};
-		A1000150 /* Release */ = {
+		CCCCCCCCCCCCCCCCCCCC0011 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location once to assign your side in the game.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CardBattle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,25 +360,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1000110 /* Build configuration list for PBXProject "CardBattle" */ = {
+		CCCCCCCCCCCCCCCCCCCC0006 /* Build configuration list for PBXProject "CardBattle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1000120 /* Debug */,
-				A1000130 /* Release */,
+				CCCCCCCCCCCCCCCCCCCC0008 /* Debug */,
+				CCCCCCCCCCCCCCCCCCCC0009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1000090 /* Build configuration list for PBXNativeTarget "CardBattle" */ = {
+		CCCCCCCCCCCCCCCCCCCC0007 /* Build configuration list for PBXNativeTarget "CardBattle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1000140 /* Debug */,
-				A1000150 /* Release */,
+				CCCCCCCCCCCCCCCCCCCC0010 /* Debug */,
+				CCCCCCCCCCCCCCCCCCCC0011 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A1000100 /* Project object */;
+	rootObject = CCCCCCCCCCCCCCCCCCCC0001 /* Project object */;
 }
