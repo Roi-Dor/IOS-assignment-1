@@ -1,7 +1,10 @@
 # CardBattle
 
 
-Uploading Simulator Screen Recording - iPhone 17 Pro - 2026-07-01 at 10.46.32.mov…
+
+
+https://github.com/user-attachments/assets/f810bfea-f5b4-4de1-84ba-6d5dc381a02b
+
 
 
 A small UIKit + Storyboard iOS card game. The player is assigned to the **East** or **West** side based on their GPS longitude, then plays 10 automatic rounds of high-card against the PC.
